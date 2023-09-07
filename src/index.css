@@ -1,13 +1,221 @@
-body {
+/* 
+CSS SPECIFICITY > WHICH CODE WILL BE GIVEN IMPORTANCE
+1. ORDER
+2. Embedded vs External Stylesheet (Embedded wins)
+3. Inline styles will have higher priority over embedded and external links
+4. !important
+*/
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --background-overlay: rgba(36, 35, 35, 0.376)
+}
+
+/*ELEMENT SELECTORS - GENERAL STYLINGS*/
+
+body {
+  /* background-color: orangered; */
+  font-family: 'Poppins', sans-serif;
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+/* CUSTOM CLASSNAME SELECTORS*/
+
+/****************************************************HEADER SECTION****************************/
+.header {
+  position: relative;
+  height: 100vh;
+  background-image: linear-gradient(rgba(3, 4, 7, 0.48), rgba(5, 10, 30, 0.48)),
+      url('assets/images/pexels-royal-anwar-450214.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.header__brand {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.header__brand--span {
+  color: #20E700;
+}
+
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 7%;
+  background-color: rgba(36, 35, 35, 0.376) !important; 
+  /* background-color: var(--background-overlay); */
+}
+
+.header__nav ul li {
+  display: inline-block;
+  margin: 1rem 1rem;
+}
+
+.header__nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+.header__image--sm {
+  /* visibility: hidden;  */
+  display: none;
+}
+
+
+
+.header__heading--desktop {
+  position: absolute;
+  /* background-color: green; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+
+.header__heading--mobile {
+  display: none;
+}
+
+.header__heading--h1 {
+  font-size: 70px;
+  margin-top: 10px;
+}
+
+.header__heading--h2{
+  text-align: left;
+  padding-left: 1.3rem;
+}
+
+/****************************************************ABOUT SECTION****************************/
+.about {
+  height: 80vh;
+  background-color: #1E1E1E;
+  color: #fff;
+}
+
+.about__img{
+  display: none;
+}
+
+.about__heading {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.about__heading--h2 {
+  font-size: 60px;
+  padding-top: 6rem;
+}
+
+.about__heading--paragraph{
+  text-align: center;
+  font-size: 1rem;
+}
+
+.about__skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 3%;
+  margin: auto;
+}
+
+.about__skills-h3 {
+  padding-right: 5%;
+}
+
+.about__skills-h3--1{
+  border-bottom: 3px solid #20E700;
+  width:5%;
+  margin-right: 50px;
+}
+
+.about__content{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 4%;
+  /* background-color: green; */
+  width: 50%;
+  padding-left: 2%;
+ text-align: left;
+}
+
+.about__content-h3{
+  color: #20E700;
+  font-weight: 700;
+}
+
+.about__paragraph{
+  font-size: 1rem;
+
+}
+
+
+/****************************************************PORTFOLIO SECTION****************************/
+
+.portfolio {
+  /* height: 180vh; 1024 x 728 */
+  height: 200vh;
+  padding: 50px;
+  text-align: center;
+  color: #362D2D;
+}
+
+.portfolio__heading--h2 {
+  font-size: 60px;
+  margin-top: 1%;
+}
+
+
+.portfolio__container {
+  display: grid;
+  /*two dimensional*/
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  /* NOTE TO SELF:  grid-gap: 30px; good for 1024 x 768 screen size*/
+  padding: 5%;
+  margin-top: 50px;
+}
+
+
+.portfolio__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+  display: block;
+  border-radius: 10px;
+
+}
+
+.portfolio__btn {
+  background-color: #45893A;
+  color: #fff;
+  height: 75px;
+  width: 303px;
+  padding: 2% 5%;
+  border-radius: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
 }
