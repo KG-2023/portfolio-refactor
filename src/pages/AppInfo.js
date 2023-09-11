@@ -1,8 +1,9 @@
 import {Link} from 'react-router-dom';
-const AboutPage = () => {
+const AppInfo = () => {
     return (
         <>
-        <h1>ABOUT PAGE TEST</h1>
+        <h1>APP VERSION INFORMATION</h1>
+        <h3>Version 1.1.0.0</h3>
         <Link to='/' >Go Back To HOME</Link>
         </>
     )
@@ -13,4 +14,4 @@ const AboutPage = () => {
     
 }
 
-export default AboutPage;
+export default AppInfo;
