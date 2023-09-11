@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter as Router, Routes , Route} from 'react-router-dom';
+import {BrowserRouter as BRouter, Routes as Rtes , Route as Rte} from 'react-router-dom';
 import Header from './components/Header'
 import About from './components/About'
 import AppInfo from './pages/AppInfo'
@@ -14,14 +14,13 @@ function App() {
     <div className="App">
      
      
-      <Router>
+      <BRouter>
      
-        <Routes>
-          <Route path='/' element={
+        <Rtes>
+          <Rte path='/' element={
             <>
            
             <Header />
-            
             <About />
             <Portfolio />
             <Contact />
@@ -30,10 +29,10 @@ function App() {
         
             </>
           }/>
-           <Route path="/about" element={<AppInfo />} />
-        </Routes>
+           <Rte path="/about" element={<AppInfo />} />
+        </Rtes>
       
-      </Router>
+      </BRouter>
     </div>
   );
 }
