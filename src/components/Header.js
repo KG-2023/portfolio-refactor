@@ -15,9 +15,9 @@ const Header = () => {
             </div>
             <div className="header__heading--mobile">
                 <h1 className="header__heading--h1">WEB DEVELOPER</h1>
-                <h2 className="header__heading--h2">Hi, I am <span class="header__heading--span1">Rodrigo Lopez</span>
+                <h2 className="header__heading--h2">Hi, I am <span className="header__heading--span1">Rodrigo Lopez</span>
                     
-                    <span class="header__heading--span2">Let's Connect</span>
+                    <span className="header__heading--span2">Let's Connect</span>
                 </h2>
             </div>
         </div>       
